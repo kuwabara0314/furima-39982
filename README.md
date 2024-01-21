@@ -55,9 +55,9 @@
 |postcode        |string    |null: false                     |
 |prefecture_id   |integer   |null: false                     |
 |municipalities  |string    |null: false                     |
-|block           |integer   |null: false                     |
+|block           |string    |null: false                     |
 |building        |string    |null: false                     |
-|phone_number    |integer   |null: false                     |
+|phone_number    |string    |null: false                     |
 |buy             |references|null: false, foreign_key: true  |
 
 ## Association
