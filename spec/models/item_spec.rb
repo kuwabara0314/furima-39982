@@ -30,28 +30,28 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Comment can't be blank")
       end
-      it 'カテゴリーが空だと出品できない' do
-        @item.category = nil
+      it 'カテゴリーが未選択だと出品できない' do
+        @item.category = FactoryBot.create(:category, id: 1)
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
-      it '商品の状態が空だと出品できない' do
-        @item.condition = nil
+      it '商品の状態が未選択だと出品できない' do
+        @item.condition = FactoryBot.create(:condition, id: 1)
         @item.valid?
         expect(@item.errors.full_messages).to include("Condition can't be blank")
       end
-      it '配送料の負担が空だと出品できない' do
-        @item.delivery_charge = nil
+      it '配送料の負担が未選択だと出品できない' do
+        @item.delivery_charge = FactoryBot.create(:delivery_charge, id: 1)
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery charge can't be blank")
       end
-      it '発送元の地域が空だと出品できない' do
-        @item.prefecture = nil
+      it '発送元の地域が未選択だと出品できない' do
+        @item.prefecture = FactoryBot.create(:prefecture, id: 1)
         @item.valid?
         expect(@item.errors.full_messages).to include("Prefecture can't be blank")
       end
-      it '発送までの日数が空だと出品できない' do
-        @item.day_required = nil
+      it '発送までの日数が未選択だと出品できない' do
+        @item.day_required = FactoryBot.create(:day_required, id: 1)
         @item.valid?
         expect(@item.errors.full_messages).to include("Day required can't be blank")
       end
