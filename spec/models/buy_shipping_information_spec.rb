@@ -54,7 +54,12 @@ RSpec.describe BuyShippingInformation, type: :model do
       it 'phone_numberが10桁以上11桁以内でないと保存できない' do
         @buy_shipping_information.phone_number = '123456'
         @buy_shipping_information.valid?
-        expect(@buy_shipping_information.errors.full_messages).to include("Phone number is too short")
+        expect(@buy_shipping_information.errors.full_messages).to include("Phone number is too short or too long")
+      end
+      it 'phone_numberが10桁以上11桁以内でないと保存できない' do
+        @buy_shipping_information.phone_number = '123456789012'
+        @buy_shipping_information.valid?
+        expect(@buy_shipping_information.errors.full_messages).to include("Phone number is too short or too long")
       end
       it 'phone_number半角数字でないと保存できない' do
         @buy_shipping_information.phone_number = '０９０１２３４５６７８'
