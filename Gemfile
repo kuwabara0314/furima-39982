@@ -80,6 +80,7 @@ end
 
 group :production do
   gem 'unicorn', '6.1.0'
+  gem 'pg'
 end
 
 gem 'pry-rails'
@@ -94,7 +95,5 @@ gem 'active_hash'
 gem 'payjp'
 
 gem 'gon'
-
-gem 'pg', '< 1.5.4'
 
 gem "aws-sdk-s3", require: false
