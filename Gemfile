@@ -80,7 +80,7 @@ end
 
 group :production do
   gem 'unicorn', '6.1.0'
-  gem 'pg'
+  #gem 'pg'
 end
 
 gem 'pry-rails'
