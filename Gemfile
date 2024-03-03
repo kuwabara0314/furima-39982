@@ -95,4 +95,6 @@ gem 'payjp'
 
 gem 'gon'
 
+gem 'pg'
+
 gem "aws-sdk-s3", require: false
