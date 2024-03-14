@@ -16,8 +16,6 @@
 - has_many :items
 - has_many :buys
 
-
-
 # itemsテーブル
 |Column              |Type       |Options                         |
 |--------------------|-----------|--------------------------------|
@@ -35,7 +33,6 @@
 - belongs_to :user
 - has_one :buy
 
-
 # buysテーブル
 |Column                |Type       |Options                        |
 |----------------------|-----------|-------------------------------|
@@ -43,11 +40,9 @@
 |item                  |references |null: false, foreign_key: true |
 
 ## Association
-
 - belongs_to :user
 - belongs_to :item
 - has_one :shipping_information
-
 
 # shipping_informationsテーブル
 |Column          |Type      |Options                         |
